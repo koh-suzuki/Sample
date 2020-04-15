@@ -1,9 +1,9 @@
 <header>
   <div class="header-logo">
-    MiniTweet
+    <%= link_to "MiniTweet", root_path %>
   </div>
   <ul class="header-menus">
-    <li>MiniTweetについて</li>
+    <li><%= link_to "MiniTweetについて", about_path %></li>
   </ul>
 </header>
 <div class="about-main">
@@ -12,4 +12,5 @@
     SNSアプリケーションです。
     身近に起きた出来事やその時の気持ちを投稿し、他のユーザーと楽しくシェアできます。
   </p>
+  <img class="about-img" src="/about.png">
 </div>
