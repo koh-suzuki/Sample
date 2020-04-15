@@ -20,3 +20,6 @@ ADD ./Gemfile.lock $APP_ROOT/Gemfile.lock
 # Gemfileのbundle install
 RUN bundle install
 ADD . $APP_ROOT
+
+# コンソールの日本語化できなくて困ったので追加
+ENV LANG C.UTF-8
