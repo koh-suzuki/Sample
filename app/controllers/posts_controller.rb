@@ -8,8 +8,11 @@ class PostsController < ApplicationController
 
     def create
       @post = Post.new(content: params[:content])
-      @post.save
-      redirect_to posts_url
+      if @post.save
+        redirect_to posts_url
+      else
+        redirect_to new_post_url
+      end
     end
 
     def edit
@@ -19,8 +22,11 @@ class PostsController < ApplicationController
     def update
       @post = Post.find(params[:id])
       @post.content = params[:content]
-      @post.save
-      redirect_to posts_path
+      if @post.save
+        redirect_to posts_path
+      else
+        render :edit
+      end
     end
 
     def destroy
