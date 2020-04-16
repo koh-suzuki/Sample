@@ -17,9 +17,16 @@ class PostsController < ApplicationController
     end
     
     def update
+      @post = Post.find(params[:id])
+      @post.content = params[:content]
+      @post.save
+      redirect_to posts_path
     end
 
-    def delete
+    def destroy
+      @post = Post.find(params[:id])
+      @post.destroy
+      redirect_to posts_path
     end
 
     def show
