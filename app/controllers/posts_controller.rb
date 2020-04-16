@@ -12,6 +12,16 @@ class PostsController < ApplicationController
       redirect_to posts_url
     end
 
+    def edit
+      @post = Post.find(params[:id])
+    end
+    
+    def update
+    end
+
+    def delete
+    end
+
     def show
       @post = Post.find(params[:id])
     end
