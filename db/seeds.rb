@@ -24,5 +24,5 @@ posts.each { |post| Post.create!(content: post) }
 User.create!(name: 'フリーエンジニア君', email: 'engineer@email.com')
 User.create!(name: 'フリーデザイナー君', email: 'designer@email.com')
 User.create!(name: 'アルパカさん', email: 'alpaca@email.com')
-User.create!(name: 'ゴリラくん', email: 'gorilla@email.com')
-User.create!(name: 'セレブエンジニアさん', email: 'celeb@email.com')
+User.create!(name: 'サンボマスターくん', email: 'gorilla@email.com')
+User.create!(name: 'みなしごはっちさん', email: 'celeb@email.com')
