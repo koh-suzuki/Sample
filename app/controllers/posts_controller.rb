@@ -4,14 +4,16 @@ class PostsController < ApplicationController
     end
 
     def new
+      @post = Post.new
     end
 
     def create
       @post = Post.new(content: params[:content])
       if @post.save
+        flash[:notice] = "新規投稿しました。"
         redirect_to posts_url
       else
-        redirect_to new_post_url
+        render :new
       end
     end
 
